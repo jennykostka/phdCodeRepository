@@ -1,0 +1,28 @@
+/*
+Single button (not group) that toggles two images back and forth:
+
+This code just uses the single button as a toggle between two components. 
+At no point is there nothing on the screen and the button itself never appears “deactivated.” 
+
+* This code can also be used with other types of components, not just images.
+*/
+
+// declare variables 
+const {image1, image2, button1} = components;
+
+// this section hides the second image from being seen until the button is pressed
+image2.updateData({visible: false});
+
+// this section switches to the other component when the button is pressed and allows for the button to be pressed again to continue the switching
+button1.on('click', () => {
+  if(!image1.data.init) {
+  image1.updateData({visible: true});
+  image2.updateData({visible: false});
+  image1.updateData({"init": true});
+}
+else {
+  image1.updateData({visible: false});
+  image2.updateData({visible: true});
+  image1.updateData({"init": false});
+}
+})
