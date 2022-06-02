@@ -1,0 +1,69 @@
+/*
+Multiple buttons that add additional text components when clicked:
+
+This code uses the buttonGroup to reveal hidden components when each new button is activated. 
+This code allows each component to occupy the space even when hidden so the buttons do not jump 
+on the slide as each new component is revealed. The hidden components could be images, 
+textDisplay or textInput. Rename the components in the code to match what is on the slide. 
+This code sequence is useful for revealing multiple questions or explanatory summary statements 
+that go with the same image.
+
+Note that with each button click, more components are set to “visibility” true until the final 
+button is clicked, and all components are visible. You can think of this code sequence as operating 
+in a similar way to “animations” that reveal content in other slide presentation programs.
+
+Note in the code that the component visibilities all turn to true by the last section, 
+but for the buttons, in each section only one button is true while the others are false.  
+Further, the true button corresponds to the button number that was clicked at the beginning of the section.
+
+If only two components need to be displayed and not three as shown here, delete the final section 
+as well as the bottom line of code for button 3 in the prior two sections.
+
+If a fourth button is needed for a fourth component, copy and paste the line of code for 
+textDisplay3 in each section and change to textDisplay4 as well as the final buttonGroup1 line for 
+button 3 and change to 4. You will then need to copy and paste the last section to create a fourth.
+*/
+
+// declare variables 
+const {textDisplay1, textDisplay2, textDisplay3, buttonGroup1} = components; 
+
+// this section hides all but the first component from being seen until the button is pressed
+textDisplay1.updateData({visible: true}); 
+textDisplay2.updateData({visible: false, visibilityBehavior: "hide" });
+textDisplay3.updateData({visible: false, visibilityBehavior: "hide" });
+buttonGroup1.updateSingleButton({disabled: true}, 1);
+buttonGroup1.updateSingleButton({disabled: false}, 2); 
+buttonGroup1.updateSingleButton({disabled: false}, 3);
+
+// this section makes sure only the first component is displayed when the first button is pressed 
+buttonGroup1.on('click:1', () => {
+  alert('button1 clicked!');
+  textDisplay1.updateData({visible: true});
+  textDisplay2.updateData({visible: false});
+  textDisplay3.updateData({visible: false});
+  buttonGroup1.updateSingleButton({disabled: true}, 1);
+  buttonGroup1.updateSingleButton({disabled: false}, 2);
+  buttonGroup1.updateSingleButton({disabled: false}, 3);
+});
+
+// this section makes sure the first and second components are displayed when the second button is pressed
+buttonGroup1.on('click:2', () => {
+  alert('button 2 clicked');
+  textDisplay1.updateData({visible: true});
+  textDisplay2.updateData({visible: true});
+  textDisplay3.updateData({visible: false});
+  buttonGroup1.updateSingleButton({disabled: false}, 1);
+  buttonGroup1.updateSingleButton({disabled: true}, 2);
+  buttonGroup1.updateSingleButton({disabled: false}, 3);
+});
+
+// this section makes sure all three components are displayed when the third button is pressed
+buttonGroup1.on('click:3', () => {
+  alert('button 3 clicked');
+  textDisplay1.updateData({visible: true});
+  textDisplay2.updateData({visible: true});
+  textDisplay3.updateData({visible: true});
+  buttonGroup1.updateSingleButton({disabled: false}, 1);
+  buttonGroup1.updateSingleButton({disabled: false}, 2);
+  buttonGroup1.updateSingleButton({disabled: true}, 3);
+});
