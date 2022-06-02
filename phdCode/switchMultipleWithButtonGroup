@@ -1,0 +1,75 @@
+/*
+Multiple buttons that show multiple different components when clicked:
+
+This code uses the buttonGroup to reveal new components when each new button is activated. 
+The components could be images, textDisplay or textInput but images paired with a textDisplay 
+will be most common. Rename the components in the code to match what is on the slide. 
+This code sequence is useful when the lesson calls for showing several images that have captions underneath 
+and/or additional passages of explanatory text that pair with the image.
+
+The code can be written to show more than just an image and a single textDisplay to be shown together 
+simply by switching the visibility from false to true. It can be helpful to name components that are all 
+supposed to be shown together with the same number or number ending (1/11/21/31, etc.) to track them through the code. 
+It also helps to group components to be displayed together when the variables are first defined.
+
+If fewer than 3 component pairs are needed on the slide, simply delete the matched line of code 
+for the component and button not needed as well as that section from the bottom of the code. 
+
+If more than 3 component pairs are needed, simply add the new components to the variable list and 
+copy the code for one of the other pairs for each section, renaming the components as needed. 
+A new final section will also need to be copied and pasted and the true/false adjusted.
+*/
+
+// declare variables
+const {image1, textDisplay1, image2, textDisplay2, image3, textDisplay3, buttonGroup1} = components; 
+
+// this section of code determines which components are shown when the slide loads 
+image1.updateData({visible: true});
+textDisplay1.updateData({visible: true}); 
+image2.updateData({visible: false});
+textDisplay2.updateData({visible: false});
+image3.updateData({visible: false});
+textDisplay3.updateData({visible: false});
+buttonGroup1.updateSingleButton({disabled: true}, 1);
+
+// this section of code shows that the first pair of components are visible when the first button is activated
+buttonGroup1.on('click:1', () => {
+  alert('button 1 clicked!');
+  image1.updateData({visible: true});
+  textDisplay1.updateData({visible: true});
+  image2.updateData({visible: false});
+  textDisplay2.updateData({visible: false});
+  image3.updateData({visible: false});
+  textDisplay3.updateData({visible: false});
+  buttonGroup1.updateSingleButton({disabled: true}, 1);
+  buttonGroup1.updateSingleButton({disabled: false}, 2);
+  buttonGroup1.updateSingleButton({disabled: false}, 3);
+});
+
+// this section of code shows that the second pair of components are visible when the second button is activated
+buttonGroup1.on('click:2', () => {
+  alert('button 2 clicked');
+  image1.updateData({visible: false});
+  textDisplay1.updateData({visible: false});
+  image2.updateData({visible: true});
+  textDisplay2.updateData({visible: true});
+  image3.updateData({visible: false});
+  textDisplay3.updateData({visible: false});
+  buttonGroup1.updateSingleButton({disabled: false}, 1);
+  buttonGroup1.updateSingleButton({disabled: true}, 2);
+  buttonGroup1.updateSingleButton({disabled: false}, 3);
+});
+
+// this section of code shows that the third pair of components are visible when the third button is activated
+buttonGroup1.on('click:3', () => {
+  alert('button 3 clicked');
+  image1.updateData({visible: false});
+  textDisplay1.updateData({visible: false});
+  image2.updateData({visible: false});
+  textDisplay2.updateData({visible: false});
+  image3.updateData({visible: true});
+  textDisplay3.updateData({visible: true});
+  buttonGroup1.updateSingleButton({disabled: false}, 1);
+  buttonGroup1.updateSingleButton({disabled: false}, 2);
+  buttonGroup1.updateSingleButton({disabled: true}, 3);
+});
