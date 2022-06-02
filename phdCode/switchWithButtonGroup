@@ -1,0 +1,62 @@
+/*
+Multiple buttons that show a different image when each button is clicked:
+
+This code uses the buttonGroup to reveal a new component when each new button is activated. 
+The components could be images, textDisplay or textInput but images will be most common. 
+Rename the components in the code to match what is on the slide. This code sequence is useful 
+when the lesson calls for showing several images along with a question or as part of an activity guide.
+This code can also be used with other types of components, not just images.
+
+To keep your code and slides organized, keep component names numbered or rename 
+them so they describe their contents. This will make it easier to keep track of your code. 
+
+If fewer than 3 components are needed on the slide, simply delete the matched line of code 
+for the component and button not needed as well as that section from the bottom of the code. 
+
+If more than 3 are needed, add a matched line of code for additional components to each section, 
+as well as a new section for each additional component.
+*/
+
+// declare variables
+const {image1, image2, image3, buttonGroup1} = components; 
+ 
+// this section of code determines which image is shown when the slide loads 
+image1.updateData({visible: true}); 
+image2.updateData({visible: false});
+image3.updateData({visible: false});
+buttonGroup1.updateSingleButton({disabled: true}, 1);
+buttonGroup1.updateSingleButton({disabled: false}, 2);
+buttonGroup1.updateSingleButton({disabled: false}, 3);
+
+// this section of code shows that the first component is visible when the first button is clicked
+buttonGroup1.on('click:1', () => {
+  alert('button 1 clicked!');
+  image1.updateData({visible: true});
+  image2.updateData({visible: false});
+  image3.updateData({visible: false});
+  buttonGroup1.updateSingleButton({disabled: true}, 1);
+  buttonGroup1.updateSingleButton({disabled: false}, 2);
+  buttonGroup1.updateSingleButton({disabled: false}, 3);
+});
+
+// this section of code shows that the second component is visible when the second button is clicked
+buttonGroup1.on('click:2', () => {
+  alert('button 2 clicked');
+  image1.updateData({visible: false});
+  image2.updateData({visible: true});
+  image3.updateData({visible: false});
+  buttonGroup1.updateSingleButton({disabled: false}, 1);
+  buttonGroup1.updateSingleButton({disabled: true}, 2);
+  buttonGroup1.updateSingleButton({disabled: false}, 3);
+});
+
+// this section of code shows that the third component is visible when the third button is clicked
+buttonGroup1.on('click:3', () => {
+  alert('button 3 clicked');
+  image1.updateData({visible: false});
+  image2.updateData({visible: false});
+  image3.updateData({visible: true});
+  buttonGroup1.updateSingleButton({disabled: false}, 1);
+  buttonGroup1.updateSingleButton({disabled: false}, 2);
+  buttonGroup1.updateSingleButton({disabled: true}, 3);
+});
