@@ -1,0 +1,35 @@
+/*
+Passing text from one slide to another:
+
+This code allows you to send any input text to a text display component on another slide.
+The code in this example goes on two separate slides, one where the text is input and 
+one where the text is displayed.
+
+Be sure to check that all variable names and slideIDs are put in correctly.
+*/
+
+//Add this code to the slide where the text is input:
+// declare variables
+const {textInput1} = components;
+onInit();
+function onInit(){
+  if(!textInput1.data.init) {
+
+// set initial states
+   textInput1.updateData({text:"Write something here"}); 
+
+// create/update a dummy variable to keep track of whether the screen has initialized
+    textInput1.updateData({"init": true});
+  }
+}
+
+//Add this code to the slide where the text is displayed:
+// declare variables
+const {textDisplay1} = components;
+
+// variable
+// getFromSlide (slideID from previous slide, component that you're interested in)
+const oldText = getFromSlide('slide-cddbeaf85c0d', 'textInput1.data.text');
+
+// replace component on this slide with data
+textDisplay1.updateData({text:oldText});
