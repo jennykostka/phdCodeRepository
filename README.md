@@ -1,8 +1,6 @@
 # phdCodeRepository
 Code for PhD Science interactive slides
 
-Code for PhD Science DCDs
-
 Things that go here:
 
 - Frequently used
