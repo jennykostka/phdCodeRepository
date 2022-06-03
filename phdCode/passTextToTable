@@ -1,0 +1,21 @@
+/*
+Passing data entered in a text input to a table cell on a different slide:
+
+This is a special case of code that can be used to have data entered in a textInput 
+on one slide populate a cell in a table on a different slide. This can allow the user 
+to only focus on one part of a larger table without having to show the entire table (e.g.,
+for writing a Concept Statement).
+
+This code may often be used in conjunction with a larger set of data transfer code 
+between tables as in the passTable file. If that is the case, there is no reason to repeat 
+the declaration of variables. If that is not the case, then use the full set of example code here.
+*/
+
+// declare variables 
+const {snakeTableUpdate} = components; //this is the table on the current slide
+
+let receivingTable = snakeTableUpdate; // remember to update the receivingTable with the table name above
+
+//note that this slide code might be different from the sendingTable slide code, so slideID is not used
+receivingTable.updateCell(0, 0, {
+   value:getFromSlide('slide-efea46c11205', 'textInput1.data.text'), editable: true});
