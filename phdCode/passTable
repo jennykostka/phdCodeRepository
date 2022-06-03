@@ -1,0 +1,43 @@
+/*
+Passing table data from one slide to another:
+
+This code goes on the slide where the table data will be displayed and
+refers back to a previous slide where the table appeared earlier. 
+
+When working with a table that will be updated multiple times across a lesson, 
+it is recommended to name the tables in camelCase with sequential numbers or terms. 
+The receivingTable will always be the version of the table on the slide you are coding. 
+The sendingTable and the slideID will be the previous instance of the table.
+
+If the data input should be locked and remain uneditable, keep the false tag, 
+but change to true if more information might be added into the cell during the lesson.
+
+Change the cell identifiers as needed to match the dimensions of the tables on the slides. 
+Adjust the code for however many cells you are transferring data between 
+(delete or copy/paste as needed).
+*/
+
+// declare variables 
+const {snakeTableUpdate} = components; //this is the table on the current slide
+let receivingTable = snakeTableUpdate; // remember to update the receivingTable with the table name above
+let slideID = 'slide-eb541936ce34'; // remember to update the slide ID for the slide you are pulling data from
+let sendingTable = 'snakeTable'; // remember to update the sendingTable with the table name from the slide identified above
+
+// You will only need to adjust the cell identifiers below but not the slideID or the names of the Tables involved in data transfer
+receivingTable.updateCell(0, 0, { 
+    value:getFromSlide(slideID, sendingTable).data.rows[0][0].value, editable: false, });
+ 
+receivingTable.updateCell(1, 0, { 
+    value:getFromSlide(slideID, sendingTable).data.rows[1][0].value, editable: false, }); 
+    
+receivingTable.updateCell(0, 1, { 
+    value:getFromSlide(slideID, sendingTable).data.rows[0][1].value, editable: false, }); 
+ 
+receivingTable.updateCell(1, 1, { 
+    value:getFromSlide(slideID, sendingTable).data.rows[1][1].value, editable: false, });
+    
+receivingTable.updateCell(0, 2, { 
+    value:getFromSlide(slideID, sendingTable).data.rows[0][2].value, editable: false, }); 
+    
+receivingTable.updateCell(1, 2, { 
+    value:getFromSlide(slideID, sendingTable).data.rows[1][2].value, editable: false, });
