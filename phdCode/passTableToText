@@ -1,0 +1,17 @@
+/*
+Passing data from a table cell to a text display on a different slide:
+
+This is an example of pulling Table data into a textDisplay (or a textInput).
+This will be useful when a single aspect of a larger table is determined to be a focus in the lesson.
+*/
+
+// declare variables
+const {textDisplay1} = components;
+ 
+// variable
+// getFromSlide (slideID from previous slide, name of Table and the specific cell to pull from
+ 
+const oldText = getFromSlide('slide-1bc7f0f99d53', 'anchorChart7').data.rows[0][0].value;
+ 
+// replace component on this slide with that cell data
+textDisplay1.updateData({text:oldText});
