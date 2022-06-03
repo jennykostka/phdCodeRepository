@@ -1,0 +1,16 @@
+/*
+Align or justify components:
+
+The align function works with textInput, image and button.
+The justify function works with buttonGroup.
+*/
+
+//align
+// declare variables
+const {image1} = components; 
+image1.updateData({align: "right"}); // right can be changed to left as needed
+
+//justify
+// declare variables
+const {buttonGroup1} = components; 
+buttonGroup1.updateData({justify: "left"}); // left can be changed to right as needed
