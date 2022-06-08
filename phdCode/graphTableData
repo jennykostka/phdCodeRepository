@@ -1,0 +1,27 @@
+/*
+Creates a line graph using data from a table.
+First column's data goes on the x-axis; second column's data
+goes on the y-axis. 
+Works with GeoGebra component (can test with components b4ayhgtj,
+gvh8s9zc, or q7efprt6).
+Data is graphed when the button is clicked.
+*/
+
+//declare variables
+const {button1, table1, ggb1} = components;
+
+//set graph coordinates using table data when the button is clicked
+button1.on('click', ()=>{
+    ggb1.instance.setCoords("Point1", table1.getCell(0,1).value, table1.getCell(1,1).value);
+    ggb1.instance.setCoords("Point2", table1.getCell(0,2).value, table1.getCell(2,1).value);
+    ggb1.instance.setCoords("Point3", table1.getCell(0,3).value, table1.getCell(3,1).value);
+    ggb1.instance.setCoords("Point4", table1.getCell(0,4).value, table1.getCell(4,1).value);
+    ggb1.instance.setCoords("Point5", table1.getCell(0,5).value, table1.getCell(5,1).value);
+    ggb1.instance.setCoords("Point6", -20, -20); //not sure what this point is for?
+    ggb1.instance.setFixed("Point1", true, false);
+    ggb1.instance.setFixed("Point2", true, false);
+    ggb1.instance.setFixed("Point3", true, false);
+    ggb1.instance.setFixed("Point4", true, false);
+    ggb1.instance.setFixed("Point5", true, false);
+    ggb1.instance.setFixed("Point6", true, false);
+    });
