@@ -1,0 +1,78 @@
+/*
+Uses buttonGroups to create a functional calculator
+*/
+
+//declare variables, set initial conditions for text display
+const {textInput1, text1, buttonGroup1, buttonGroup2, buttonGroup3, buttonGroup4, buttonGroup5} = components; 
+onInit();
+function onInit(){
+  if(!text1.data.init) {
+// set initial states
+   text1.updateData({text:"Answer"}); 
+    // create/update a dummy variable to keep track of whether the screen has initialized
+    text1.updateData({"init": true});
+  }
+}
+
+//assign numbers and operations to buttons
+autorun(() => {
+buttonGroup1.on("click:1", () => {
+    textInput1.updateData({text: textInput1.data.text + "1"});
+});
+buttonGroup1.on("click:2", () => {
+    textInput1.updateData({text: textInput1.data.text + "2"});
+});
+buttonGroup1.on("click:3", () => {
+    textInput1.updateData({text: textInput1.data.text + "3"});
+});
+buttonGroup1.on("click:4", () => {
+    textInput1.updateData({text: textInput1.data.text + "+"});
+});
+buttonGroup2.on("click:1", () => {
+    textInput1.updateData({text: textInput1.data.text + "4"});
+});
+buttonGroup2.on("click:2", () => {
+    textInput1.updateData({text: textInput1.data.text + "5"});
+});
+buttonGroup2.on("click:3", () => {
+    textInput1.updateData({text: textInput1.data.text + "6"});
+});
+buttonGroup2.on("click:4", () => {
+    textInput1.updateData({text: textInput1.data.text + "-"});
+});
+buttonGroup3.on("click:1", () => {
+    textInput1.updateData({text: textInput1.data.text + "7"});
+});
+buttonGroup3.on("click:2", () => {
+    textInput1.updateData({text: textInput1.data.text + "8"});
+});
+buttonGroup3.on("click:3", () => {
+    textInput1.updateData({text: textInput1.data.text + "9"});
+});
+buttonGroup3.on("click:4", () => {
+    textInput1.updateData({text: textInput1.data.text + "*"});
+});
+buttonGroup4.on("click:1", () => {
+    textInput1.updateData({text: textInput1.data.text + "."});
+});
+buttonGroup4.on("click:2", () => {
+    textInput1.updateData({text: textInput1.data.text + "0"});
+});
+buttonGroup4.on("click:3", () => {
+    textInput1.updateData({text: textInput1.data.text + "/"});
+});
+
+//clear text display 
+buttonGroup5.on("click:1", () => {
+    textInput1.updateData({text:  " "});
+    text1.updateData({text: "Answer"});
+});
+
+//"equals" button does the math
+});
+buttonGroup4.on("click:4", () => {
+    const result = utils.math.evaluateLatex(textInput1.data.text);
+    console.log(result);
+    let newValue = result.value
+    text1.updateData({text: textInput1.data.text + "=" + newValue});
+});
