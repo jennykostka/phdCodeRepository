@@ -1,0 +1,25 @@
+/*
+Table that peforms a calculation using data from one table cell
+and outputs the result to another table cell.
+This example halves the value in one cell and outputs the result in 
+the adjacent cell. 
+The calculation runs when the button is clicked.
+Update the row and column numbers and the calculation as needed.
+*/
+
+//declare variables
+const {button1, table1} = components;
+
+//perform calculation when the button is clicked
+button1.on('click', ()=>{
+    table1.updateCell(1, 2, { 
+      value:table1.data.rows[1][1].value/2, editable: false, }); 
+    table1.updateCell(2, 2, { 
+      value:table1.data.rows[2][1].value/2, editable: false, });
+    table1.updateCell(3, 2, { 
+      value:table1.data.rows[3][1].value/2, editable: false, });
+    table1.updateCell(4, 2, { 
+      value:table1.data.rows[4][1].value/2, editable: false, });
+    table1.updateCell(5, 2, { 
+      value:table1.data.rows[5][1].value/2, editable: false, });
+  });
