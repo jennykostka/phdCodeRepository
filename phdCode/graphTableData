@@ -5,6 +5,9 @@ goes on the y-axis.
 Works with GeoGebra component (can test with components b4ayhgtj,
 gvh8s9zc, or q7efprt6).
 Data is graphed when the button is clicked.
+
+See Slide 3 in Calculator Prototypes deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/7527825b-e9b4-470f-b033-810f37e6e51f/v/latest
 */
 
 //declare variables

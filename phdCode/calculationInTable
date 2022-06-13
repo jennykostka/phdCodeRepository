@@ -5,6 +5,9 @@ This example halves the value in one cell and outputs the result in
 the adjacent cell. 
 The calculation runs when the button is clicked.
 Update the row and column numbers and the calculation as needed.
+
+See Slide 2 in Calculator Prototypes deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/7527825b-e9b4-470f-b033-810f37e6e51f/v/latest
 */
 
 //declare variables
