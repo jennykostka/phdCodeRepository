@@ -15,6 +15,9 @@ but change to true if more information might be added into the cell during the l
 Change the cell identifiers as needed to match the dimensions of the tables on the slides. 
 Adjust the code for however many cells you are transferring data between 
 (delete or copy/paste as needed).
+
+See Slide 18 in Appendix B Coding Examples deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 */
 
 // declare variables 

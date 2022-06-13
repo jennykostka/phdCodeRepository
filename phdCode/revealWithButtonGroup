@@ -22,6 +22,9 @@ as well as the bottom line of code for button 3 in the prior two sections.
 If a fourth button is needed for a fourth component, copy and paste the line of code for 
 textDisplay3 in each section and change to textDisplay4 as well as the final buttonGroup1 line for 
 button 3 and change to 4. You will then need to copy and paste the last section to create a fourth.
+
+See Slide 5 in Appendix B Coding Examples deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 */
 
 // declare variables 

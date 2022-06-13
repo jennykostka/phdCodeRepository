@@ -9,6 +9,8 @@ Be sure to check that all variable names and slideIDs are put in correctly.
 */
 
 //Add this code to the slide where the text is input:
+//See Slide 14 in Appendix B Coding Examples deck:
+//https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 // declare variables
 const {textInput1} = components;
 onInit();
@@ -24,6 +26,8 @@ function onInit(){
 }
 
 //Add this code to the slide where the text is displayed:
+//See Slide 15 in Appendix B Coding Examples deck:
+//https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 // declare variables
 const {textDisplay1} = components;
 

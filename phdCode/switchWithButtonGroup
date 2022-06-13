@@ -15,6 +15,9 @@ for the component and button not needed as well as that section from the bottom 
 
 If more than 3 are needed, add a matched line of code for additional components to each section, 
 as well as a new section for each additional component.
+
+See Slide 7 in Appendix B Coding Examples deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 */
 
 // declare variables

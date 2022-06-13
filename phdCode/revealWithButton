@@ -6,6 +6,9 @@ Rename the components in the code to match what is on the slide.
 This code sequence is useful for hiding optional instructions or activities that are 
 shared at a teacher’s discretion (homework) or should only be revealed when the 
 teacher chooses (e.g., Teacher Text).
+
+See Slide 2 in Appendix B Coding Examples deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 */
 
 // declare variables

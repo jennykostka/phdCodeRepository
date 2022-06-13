@@ -3,6 +3,9 @@ Passing data from a table cell to a text display on a different slide:
 
 This is an example of pulling Table data into a textDisplay (or a textInput).
 This will be useful when a single aspect of a larger table is determined to be a focus in the lesson.
+
+See Slide 20 in Appendix B Coding Examples deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 */
 
 // declare variables

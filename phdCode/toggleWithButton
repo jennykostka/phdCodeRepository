@@ -5,6 +5,9 @@ This code just uses the single button as a toggle between two components.
 At no point is there nothing on the screen and the button itself never appears “deactivated.” 
 
 * This code can also be used with other types of components, not just images.
+
+See Slide 12 in Appendix B Coding Examples deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 */
 
 // declare variables 

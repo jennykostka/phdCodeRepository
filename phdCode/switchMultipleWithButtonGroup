@@ -18,6 +18,9 @@ for the component and button not needed as well as that section from the bottom 
 If more than 3 component pairs are needed, simply add the new components to the variable list and 
 copy the code for one of the other pairs for each section, renaming the components as needed. 
 A new final section will also need to be copied and pasted and the true/false adjusted.
+
+See Slide 11 in Appendix B Coding Examples deck:
+https://digital.greatminds.org/lessons/authoring/editor/activities/globalId/ed5c55ba-f3f2-4903-8109-3455fd79fc12/v/latest
 */
 
 // declare variables
