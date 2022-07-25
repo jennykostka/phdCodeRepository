@@ -4,7 +4,7 @@ This code uses the buttonGroup to reveal hidden components when activated.
 The hidden components could be images, textDisplay or textInput. 
 Rename the components in the code to match what is on the slide. 
 This code sequence is useful for hiding optional instructions or activities that are 
-shared at a teacher’s discretion (homework) or should only be revealed when the 
+shared at a teacher’s discretion (e.g., homework) or should only be revealed when the 
 teacher chooses (e.g., Teacher Text).
 
 See Slide 2 in Appendix B Coding Examples deck:
