@@ -1,0 +1,9 @@
+/*
+Small pieces of code that can be added to the rich text editor component for additional formatting.
+Click the Source button in the component to access HTML.
+*/
+
+// to add a link - update with relevant url and link text
+// use target="_blank" so the link opens in a new tab
+<a href="url" target="_blank">link text</a>
+
