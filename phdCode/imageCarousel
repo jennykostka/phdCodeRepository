@@ -1,0 +1,74 @@
+const { image1, buttonGroup1 } = components;
+
+const imageList = [];
+for (el in components) {
+	if (el.includes("image")) {
+		imageList.push(el);
+	}
+}
+
+console.log(imageList);
+
+slide.on("firstload", () => {
+	for (el in components) {
+		console.log(el);
+		if (imageList.includes(el)) {
+			didUtils.disappear(components[el]);
+		}
+	}
+	image1.updateData({ visible: true });
+});
+
+
+
+function getVisibleNum() {
+    let desiredIndex = 0;
+    console.log(imageList);
+    imageList.every((currentEl, index) => {
+        //if something is visible, kick out of loop
+		if (!!components[currentEl].data.visible) {
+			desiredIndex = index;
+			return false;
+        }
+        //keep going
+		return true;
+	});
+	return (desiredIndex + 1);
+}
+
+buttonGroup1.on("click:1", () => {
+    const visibleNum = getVisibleNum();
+	imageList.forEach((element) => {
+		didUtils.disappear(components[element]);
+	});
+    console.log(visibleNum);
+    let compName = "";
+    if (visibleNum === 1) {
+        compName = "image" + (imageList.length);
+        utils.screenReader.sendMessage(`Image ${imageList.length} of ${imageList.length}.  ${components[compName].data.alt}`);
+
+    } else {
+        compName = "image" + (visibleNum - 1);
+        utils.screenReader.sendMessage(`Image ${visibleNum-1} of ${imageList.length}.  ${components[compName].data.alt}`);
+
+    }
+    didUtils.show(components[compName]);
+});
+
+buttonGroup1.on("click:2", () => {
+    const visibleNum = getVisibleNum();
+	imageList.forEach((element) => {
+		didUtils.disappear(components[element]);
+	});
+    if (visibleNum ===imageList.length) {
+        compName = "image1";
+        utils.screenReader.sendMessage(`Image ${1} of ${imageList.length}.  ${components[compName].data.alt}`);
+
+   } else {
+        compName = "image" + (visibleNum + 1);
+        utils.screenReader.sendMessage(`Image ${visibleNum+1} of ${imageList.length}.  ${components[compName].data.alt}`);
+
+   }
+    didUtils.show(components[compName]);
+
+});
