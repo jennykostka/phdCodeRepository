@@ -1,0 +1,22 @@
+/*
+Code can be used to enable adjusting the timing of a video. 
+The context of a lesson can be used to determine whether a video should 
+start or pause at a certain time stamp, or a video may have a second or so 
+of a blank screen before the content starts. In either of these cases, 
+the code below can be added to adjust the timing of the video.
+*/
+
+//to adjust the starting point of a video
+// declare variables
+const {media1} = components; 
+media1.on('ready',() => {
+	media1.skipTo(0.7);
+}); // 0.7 is the time in seconds; change to the desired start time (up to tenths of a second)
+
+//to pause a video at a certain time
+//declare variables
+const {media1} = components;
+media1.on('crosstime', () => {
+  media1.pause();
+  console.log('the video reached 24s mark')
+  }, { time: 24 }); // 24 is the time in seconds; change to desired pause time (up to tenths of a second); console.log statement is for troubleshooting
