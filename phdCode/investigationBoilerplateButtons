@@ -1,0 +1,290 @@
+/*
+Code to use on investigation student slides
+Adds buttons to hide or show each section of the investigation boilerplate
+*/
+
+//declare variables
+const {questionButton, hypothesisButton, predictionButton, designButton, procedureButton, 
+    fairTestButton, collectDataButton, analyzeDataButton, drawConclusionsButton, reviseButton, 
+    question, questionInput, questionSpacer, 
+    hypothesis, hypothesisInput, hypothesisSpacer, 
+    prediction, predictionInput, predictionSpacer, 
+    design1, design2, design3, design4, design5, design6, design7, design8, 
+    designSpacer1, designSpacer4, designSpacer5, designSpacer6, designSpacer7, designSpacer8, 
+    designInput2, designInput3, designInput4, designInput5, designInput6, designInput7, designInput8, 
+    procedure, procedureInput, procedureSpacer, 
+    fairTest, fairTestTable, fairTestSpacer1, fairTestSpacer2, fairTestSpacer3, 
+    collectData, collectDataSpacer1, collectDataSpacer2, collectDataTable, collectDataTitle, 
+    analyzeData, analyzeDataInput, analyzeDataSpacer, 
+    drawConclusions, drawConclusionsInput, drawConclusionsSpacer, 
+    revise, reviseInput} = components; 
+
+
+//align buttons
+questionButton.updateData({justify: "left"});
+hypothesisButton.updateData({justify: "left"});
+predictionButton.updateData({justify: "left"});
+designButton.updateData({justify: "left"});
+procedureButton.updateData({justify: "left"});
+fairTestButton.updateData({justify: "left"});
+collectDataButton.updateData({justify: "left"});
+analyzeDataButton.updateData({justify: "left"});
+drawConclusionsButton.updateData({justify: "left"});
+reviseButton.updateData({justify: "left"});
+
+
+// initial state of each section; update depending on lesson context
+//question
+question.updateData({visible: false});
+questionInput.updateData({visible: false});
+questionSpacer.updateData({visible: false});
+
+//hypothesis
+hypothesis.updateData({visible: false});
+hypothesisInput.updateData({visible: false});
+hypothesisSpacer.updateData({visible: false});
+
+//prediction
+prediction.updateData({visible: false});
+predictionInput.updateData({visible: false});
+predictionSpacer.updateData({visible: false});
+
+//design
+design1.updateData({visible: false});
+design2.updateData({visible: false});
+design3.updateData({visible: false});
+design4.updateData({visible: false});
+design5.updateData({visible: false});
+design6.updateData({visible: false});
+design7.updateData({visible: false});
+design8.updateData({visible: false});
+designSpacer1.updateData({visible: false});
+designSpacer4.updateData({visible: false});
+designSpacer5.updateData({visible: false});
+designSpacer6.updateData({visible: false});
+designSpacer7.updateData({visible: false});
+designSpacer8.updateData({visible: false});
+designInput2.updateData({visible: false});
+designInput3.updateData({visible: false});
+designInput4.updateData({visible: false});
+designInput5.updateData({visible: false});
+designInput6.updateData({visible: false});
+designInput7.updateData({visible: false});
+designInput8.updateData({visible: false});
+
+//procedure
+procedure.updateData({visible: false});
+procedureInput.updateData({visible: false});
+procedureSpacer.updateData({visible: false});
+
+//fair test
+fairTest.updateData({visible: false});
+fairTestTable.updateData({visible: false});
+fairTestSpacer1.updateData({visible: false});
+fairTestSpacer2.updateData({visible: false});
+fairTestSpacer3.updateData({visible: false});
+
+//collect data
+collectData.updateData({visible: false});
+collectDataSpacer1.updateData({visible: false});
+collectDataSpacer2.updateData({visible: false});
+collectDataTable.updateData({visible: false});
+collectDataTitle.updateData({visible: false});
+
+//analyze data
+analyzeData.updateData({visible: false});
+analyzeDataInput.updateData({visible: false});
+analyzeDataSpacer.updateData({visible: false});
+
+//draw conclusions
+drawConclusions.updateData({visible: false});
+drawConclusionsInput.updateData({visible: false});
+drawConclusionsSpacer.updateData({visible: false});
+
+//revise
+revise.updateData({visible: false});
+reviseInput.updateData({visible: false});
+
+
+// these sections show or hide components when buttons are pressed
+//question
+questionButton.on('click:1', () => {
+  alert('button1 clicked!');
+  question.updateData({visible: true});
+  questionInput.updateData({visible: true});
+  questionSpacer.updateData({visible: true});
+});
+questionButton.on('click:2', () => {
+  alert('button2 clicked!');
+  question.updateData({visible: false});
+  questionInput.updateData({visible: false});
+  questionSpacer.updateData({visible: false});
+});
+
+//hypothesis
+hypothesisButton.on('click:1', () => {
+  alert('button1 clicked!');
+  hypothesis.updateData({visible: true});
+  hypothesisInput.updateData({visible: true});
+  hypothesisSpacer.updateData({visible: true});
+});
+hypothesisButton.on('click:2', () => {
+  alert('button2 clicked!');
+  hypothesis.updateData({visible: false});
+  hypothesisInput.updateData({visible: false});
+  hypothesisSpacer.updateData({visible: false});
+});
+
+//prediction
+predictionButton.on('click:1', () => {
+  alert('button1 clicked!');
+  prediction.updateData({visible: true});
+  predictionInput.updateData({visible: true});
+  predictionSpacer.updateData({visible: true});
+});
+predictionButton.on('click:2', () => {
+  alert('button2 clicked!');
+  prediction.updateData({visible: false});
+  predictionInput.updateData({visible: false});
+  predictionSpacer.updateData({visible: false});
+});
+
+//design
+designButton.on('click:1', () => {
+  alert('button1 clicked!');
+  design1.updateData({visible: true});
+  design2.updateData({visible: true});
+  design3.updateData({visible: true});
+  design4.updateData({visible: true});
+  design5.updateData({visible: true});
+  design6.updateData({visible: true});
+  design7.updateData({visible: true});
+  design8.updateData({visible: true});
+  designSpacer1.updateData({visible: true});
+  designSpacer4.updateData({visible: true});
+  designSpacer5.updateData({visible: true});
+  designSpacer6.updateData({visible: true});
+  designSpacer7.updateData({visible: true});
+  designSpacer8.updateData({visible: true});
+  designInput2.updateData({visible: true});
+  designInput3.updateData({visible: true});
+  designInput4.updateData({visible: true});
+  designInput5.updateData({visible: true});
+  designInput6.updateData({visible: true});
+  designInput7.updateData({visible: true});
+  designInput8.updateData({visible: true});
+});
+designButton.on('click:2', () => {
+  alert('button2 clicked!');
+  design1.updateData({visible: false});
+  design2.updateData({visible: false});
+  design3.updateData({visible: false});
+  design4.updateData({visible: false});
+  design5.updateData({visible: false});
+  design6.updateData({visible: false});
+  design7.updateData({visible: false});
+  design8.updateData({visible: false});
+  designSpacer1.updateData({visible: false});
+  designSpacer4.updateData({visible: false});
+  designSpacer5.updateData({visible: false});
+  designSpacer6.updateData({visible: false});
+  designSpacer7.updateData({visible: false});
+  designSpacer8.updateData({visible: false});
+  designInput2.updateData({visible: false});
+  designInput3.updateData({visible: false});
+  designInput4.updateData({visible: false});
+  designInput5.updateData({visible: false});
+  designInput6.updateData({visible: false});
+  designInput7.updateData({visible: false});
+  designInput8.updateData({visible: false});
+});
+
+//procedure
+procedureButton.on('click:1', () => {
+  alert('button1 clicked!');
+  procedure.updateData({visible: true});
+  procedureInput.updateData({visible: true});
+  procedureSpacer.updateData({visible: true});
+});
+procedureButton.on('click:2', () => {
+  alert('button2 clicked!');
+  procedure.updateData({visible: false});
+  procedureInput.updateData({visible: false});
+  procedureSpacer.updateData({visible: false});
+  });
+
+//fair test
+fairTestButton.on('click:1', () => {
+  alert('button1 clicked!');
+  fairTest.updateData({visible: true});
+  fairTestTable.updateData({visible: true});
+  fairTestSpacer1.updateData({visible: true});
+  fairTestSpacer2.updateData({visible: true});
+  fairTestSpacer3.updateData({visible: true});
+});
+fairTestButton.on('click:2', () => {
+  alert('button2 clicked!');
+  fairTest.updateData({visible: false});
+  fairTestTable.updateData({visible: false});
+  fairTestSpacer1.updateData({visible: false});
+  fairTestSpacer2.updateData({visible: false});
+  fairTestSpacer3.updateData({visible: false});
+});
+
+//collect data
+collectDataButton.on('click:1', () => {
+  alert('button1 clicked!');
+  collectData.updateData({visible: true});
+  collectDataSpacer1.updateData({visible: true});
+  collectDataSpacer2.updateData({visible: true});
+  collectDataTable.updateData({visible: true});
+  collectDataTitle.updateData({visible: true});
+});
+collectDataButton.on('click:2', () => {
+  alert('button2 clicked!');
+  collectData.updateData({visible: false});
+  collectDataSpacer1.updateData({visible: false});
+  collectDataSpacer2.updateData({visible: false});
+  collectDataTable.updateData({visible: false});
+  collectDataTitle.updateData({visible: false});
+});
+
+//analyze data
+analyzeDataButton.on('click:1', () => {
+  alert('button1 clicked!');
+  analyzeData.updateData({visible: true});
+  analyzeDataInput.updateData({visible: true});
+  analyzeDataSpacer.updateData({visible: true});
+});
+analyzeDataButton.on('click:2', () => {
+  alert('button2 clicked!');
+  analyzeData.updateData({visible: false});
+  analyzeDataInput.updateData({visible: false});
+  analyzeDataSpacer.updateData({visible: false});
+});
+
+//draw conclusions
+drawConclusionsButton.on('click:1', () => {
+  alert('button1 clicked!');
+  drawConclusions.updateData({visible: true});
+  drawConclusionsInput.updateData({visible: true});
+  drawConclusionsSpacer.updateData({visible: true});
+});
+drawConclusionsButton.on('click:2', () => {
+  alert('button2 clicked!');
+  drawConclusions.updateData({visible: false});
+  drawConclusionsInput.updateData({visible: false});
+  drawConclusionsSpacer.updateData({visible: false});
+});
+
+//revise
+reviseButton.on('click:1', () => {
+  alert('button1 clicked!');
+  revise.updateData({visible: true});
+  reviseInput.updateData({visible: true});
+});
+reviseButton.on('click:2', () => {
+  alert('button2 clicked!');
+  revise.updateData({visible: false});
+  reviseInput.updateData({visible: false});
+});
